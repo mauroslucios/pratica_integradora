@@ -1,5 +1,13 @@
 function Temp(){
-    var i, maior = 0, menor = 99, indiceMaior, indiceMenor, choveu = 0, sol =0;
+    var i, maior = 0, 
+           menor = 99, 
+           indiceMaior, 
+           indiceMenor, 
+           choveu = 0, 
+           sol = 0, 
+           media = 0,
+           total = 0;
+           aux = 0;
     const vet = new Array(12);
     
     for(i = 0;i < 12; i++){ 
@@ -13,6 +21,12 @@ function Temp(){
             sol += 1;
         }   
        
+        total += dia;
+        media = parseFloat(total/vet.length).toFixed(2);
+
+        
+
+        
     }
 
     for( i = 0;i < 12; i++){
@@ -108,4 +122,6 @@ function Temp(){
     }
     document.write("Tivemos " + sol + " dia(s) de sol.<br>");
     document.write("Tivemos " + choveu + " dia(s) de chuva.<br>");
+    document.write("A media das temperaturas foi de "+ parseFloat(media) + "<br>");
+   
 }
